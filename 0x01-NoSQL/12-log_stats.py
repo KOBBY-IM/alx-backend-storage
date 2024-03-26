@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+""" log stats module """
+
 import pymongo
 
 # Create a connection to the MongoDB server
@@ -30,4 +33,5 @@ for query in queries:
 # Print the results
 print("Methods:")
 for i, result in enumerate(results):
-    print(f"\tmethod {['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'status check'][i]}: {result}")
+    print(f"\tmethod {['GET', 'POST', 'PUT', 'PATCH', 'DELETE',
+                       'status check'][i]}: {result}")
