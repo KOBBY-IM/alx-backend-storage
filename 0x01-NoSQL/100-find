@@ -1,0 +1,9 @@
+// script that list all documents with specific name
+db = db.getSiblingDB(process.argv[2])
+
+var query = { name: /^Holberton/ }
+var projection = { name: 1, _id: 0 }
+
+db.school.find(query, projection).forEach(function(doc) {
+    printjson(doc)
+})
