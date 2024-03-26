@@ -12,6 +12,7 @@ db = connection.logs
 # Select the collection
 collection = db.nginx
 
+
 # Get the number of documents in the collection
 number_of_logs = collection.count_documents({})
 print(f"{number_of_logs} logs")
